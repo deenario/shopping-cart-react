@@ -7,7 +7,7 @@ export const getProductDetail = (queryProducts, title) => {
   return new Promise((resolve, reject) => {
     axios
       .get(
-        `http://3.129.8.167:5000/channels/tribe/chaincodes/transaction?fcn=${queryProducts}&args="ON GS PRE-WORKOUT 300G GREEN APPLE 30 SERVINGS"`
+        `http://3.143.112.56:5000/channels/tribe/chaincodes/transaction?fcn=${queryProducts}&args="ON GS PRE-WORKOUT 300G GREEN APPLE 30 SERVINGS"`
       )
       .then((res) => {
         resolve(res.data);
@@ -57,7 +57,7 @@ export const placeProductOrder = ({
     args: productData,
   };
   axios
-    .post("http://3.129.8.167:5000/channels/tribe/chaincodes/transaction", body)
+    .post("http://3.143.112.56:5000/channels/tribe/chaincodes/transaction", body)
     .then(async (res) => {
       // console.log(res);
       // toast.success(res.data?.result?.message)
